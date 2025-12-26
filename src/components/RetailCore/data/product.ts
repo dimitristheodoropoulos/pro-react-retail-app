@@ -1,5 +1,5 @@
-// Εισάγουμε το interface για να διασφαλίσουμε τη συνοχή των δεδομένων
-import { Product } from "../components/ProductCard";
+// ΑΛΛΑΓΗ: Κάνε import το Product type από το σωστό σημείο
+import { Product } from "../../../types/product.schema";
 
 const products: Product[] = [
     { 
