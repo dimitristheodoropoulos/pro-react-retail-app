@@ -1,5 +1,10 @@
 # Apex Retail – Enterprise E-Commerce Solution 🚀
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/93e56a71-8922-4ee9-b0cb-f458f9b37f33/deploy-status)](https://app.netlify.com/projects/pro-react-retail-app/deploys)
+[![Build Status](https://github.com/dimitristheodoropoulos/pro-react-retail-app/actions/workflows/ci.yml/badge.svg)](https://github.com/dimitristheodoropoulos/pro-react-retail-app/actions)
+
+**[🔗 Live Demo](https://pro-react-retail-app.netlify.app)** **Apex Retail** is a high-performance...
+
 **Apex Retail** is a high-performance, accessible, and scalable retail application built with **React 18**, **TypeScript**, and **Redux Toolkit**.
 
 Originally inspired by the advanced patterns in *Building a Real-World Retail Store App* (Chapter 20), this project has been engineered to meet the standards of enterprise-grade environments such as **Fintech (Viva.com)** and **Digital Consulting (Deloitte)**.
