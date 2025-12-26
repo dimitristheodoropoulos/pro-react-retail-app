@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* 1. Ορισμός Κύριων Χρωμάτων (Retail Brand) */
+  --color-brand-primary: #0f172a;   /* Deep Slate */
+  --color-brand-secondary: #3b82f6; /* Modern Blue */
+  --color-brand-accent: #f59e0b;    /* Amber για "Sale" ή ειδοποιήσεις */
+
+  /* 2. Ορισμός Custom Font (αν έχεις εισάγει κάποιο, π.χ. Inter) */
+  --font-brand: "Inter", ui-sans-serif, system-ui;
+
+  /* 3. Custom Border Radius (πιο στρογγυλεμένο για Retail) */
+  --radius-retail: 1.5rem;
+}
+
+/* Εδώ μπορείς να προσθέσεις δικά σου base styles αν χρειαστεί */
+@layer base {
+  body {
+   /* Δοκίμασε ένα πολύ ελαφρύ γκρι-σιέλ φόντο */
+    @apply antialiased text-slate-900 bg-[#f0f4f8]; 
+    font-family: var(--font-brand);
+  }
+}

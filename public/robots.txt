@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /checkout/  # Δεν θέλουμε τη σελίδα πληρωμής στα αποτελέσματα αναζήτησης
+
+Sitemap: https://your-demo-url.com/sitemap.xml

@@ -1,0 +1,41 @@
+name: Frontend CI Quality Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        # Χρησιμοποιούμε --legacy-peer-deps για να αποφύγουμε το conflict με το storybook-addon-vitest
+        run: npm ci --legacy-peer-deps || npm install --legacy-peer-deps
+
+      - name: Lint check
+        run: npm run lint
+
+      - name: Run Unit & Integration Tests
+        run: npm run test:run
+
+      - name: Storybook Build Check
+        run: npm run build-storybook
+
+      - name: Build check
+        run: npm run build
